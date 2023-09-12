@@ -7,6 +7,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import "animate.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,8 +43,29 @@ export default function Navbar() {
           {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
         </div>
         <div className="h-full items-center text-md text-white dark:text-gray-900 font-extrabold gap-10 animate__animated animate__fadeInDown hidden md:flex">
-          <button>Project</button>
-          <button>Contact</button>
+          <button>
+            <Link
+              to="project"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Project
+            </Link>
+          </button>
+
+          <button>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Contact
+            </Link>
+          </button>
           <div className="flex items-center gap-3">
             <Switch
               value={theme === "dark" ? "light" : "dark"}
@@ -62,8 +84,28 @@ export default function Navbar() {
         }}
       >
         <div className="h-full w-full flex flex-col items-center text-md text-white dark:text-gray-900 font-extrabold gap-5 ">
-          <button className="pt-3">Project 💻</button>
-          <button>Contact ✉️</button>
+          <button className="pt-3">
+            <Link
+              to="project"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Project 💻
+            </Link>
+          </button>
+          <button>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+            >
+              Contact ✉️
+            </Link>
+          </button>
         </div>
         <div className="w-full flex justify-end pb-3">
           <div className="flex items-center gap-3 text-white dark:text-gray-900">

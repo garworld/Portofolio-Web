@@ -51,7 +51,10 @@ export default function ProjectList() {
   ];
   return (
     <>
-      <div className="w-full h-full bg-gray-900 dark:bg-slate-300 pb-14">
+      <div
+        className="w-full h-full bg-gray-900 dark:bg-slate-300 pb-14"
+        id={"project"}
+      >
         <div
           className="text-white dark:text-gray-900 font-bold text-2xl lg:text-3xl pb-6 text-center md:text-left lg:text-left "
           data-aos="fade-right"

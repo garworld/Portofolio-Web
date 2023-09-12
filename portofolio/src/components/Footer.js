@@ -5,7 +5,10 @@ import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const nav = useNavigate();
   return (
-    <div className="w-full h-full bg-gray-900 dark:bg-slate-300 md:flex lg:flex text-white dark:text-gray-900 lg:gap-52 p-4 md:p-0 lg:p-0">
+    <div
+      className="w-full h-full bg-gray-900 dark:bg-slate-300 md:flex lg:flex text-white dark:text-gray-900 lg:gap-52 p-4 md:p-0 lg:p-0"
+      id="contact"
+    >
       <div className="w-full font-semibold" data-aos="fade-up">
         <div className="text-base md:text-lg lg:text-3xl pb-14">
           have questions or interested in collaborating?
