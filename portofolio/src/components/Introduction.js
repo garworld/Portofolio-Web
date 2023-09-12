@@ -32,8 +32,9 @@ export default function Intorduction() {
             <br />
             I'm Sinatriyya Suryanegara,
           </div>
-          <div className="text-3xl lg:text-5xl pt-4">
+          <div className="text-3xl lg:text-5xl pt-4 text-white dark:text-gray-900">
             <TypeIt
+              id="myTypeIt"
               options={{
                 loop: true,
                 cursorSpeed: 1000,

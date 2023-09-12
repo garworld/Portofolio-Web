@@ -48,3 +48,9 @@ input:focus ~ label {
   height: 100%;
   object-fit: cover;
 }
+#myTypeIt .ti-cursor {
+  color: var(--ti-cursor-color, white);
+}
+.dark {
+  --ti-cursor-color: #111827; /* Warna kursor saat mode gelap aktif */
+}
