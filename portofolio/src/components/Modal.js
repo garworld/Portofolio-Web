@@ -25,7 +25,11 @@ export default function ModalUI(props) {
           selectedItem?.link.map((val) => {
             return (
               <SwiperSlide className="w-80 h-48">
-                <img src={val} className="w-[544px] h-[312px] object-contain" />
+                <img
+                  alt=""
+                  src={val}
+                  className="w-[544px] h-[312px] object-contain"
+                />
               </SwiperSlide>
             );
           })}

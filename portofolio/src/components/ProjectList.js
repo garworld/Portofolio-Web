@@ -70,6 +70,7 @@ export default function ProjectList() {
               <div className="w-full h-full md:w-1/2 lg:w-1/2 flex justify-center flex-col">
                 <div className="p-8 w-full ">
                   <img
+                    alt=""
                     src={val.img}
                     className="w-full h-48 md:w-96 md:h-60 lg:w-full lg:h-72 object-contain"
                   ></img>

@@ -1,7 +1,7 @@
 import { GrLinkNext } from "react-icons/gr";
 import "../App.css";
 import "animate.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";

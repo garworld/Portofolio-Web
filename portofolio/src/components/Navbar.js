@@ -1,4 +1,3 @@
-import ss from "../assets/ss2.png";
 import gr from "../assets/gr.png";
 import { Switch } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -22,6 +21,7 @@ export default function Navbar() {
         break;
       case "light":
         element.classList.remove("dark");
+        break;
       default:
         break;
     }
@@ -30,6 +30,7 @@ export default function Navbar() {
     <>
       <div className="w-full h-16 lg:h-20 bg-gray-900 dark:bg-slate-300 px-4 sm:px-20 md:px-4 py-3 flex justify-between drop-shadow-lg sticky top-0 z-30">
         <img
+          alt=""
           src={gr}
           className="max-w-14 max-h-14 rounded-md animate__animated animate__fadeInDown"
           onClick={() => nav("/")}

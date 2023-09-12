@@ -49,6 +49,7 @@ export default function Intorduction() {
           <a
             href="https://drive.google.com/file/d/101rQ4c6vKvvB1gijT-5RAKUF5zhm8sum/view?usp=sharing"
             target="_blank"
+            rel="noopener noreferrer"
           >
             <button className="p-2 w-max h-max text-base rounded text-white dark:text-blue-900 border-white dark:border-blue-900 border transition-all hover:dark:text-slate-300 hover:dark:bg-blue-700 hover:text-blue-300 hover:border-blue-300 animate__animated animate__fadeInUp">
               Check out my CV

@@ -37,7 +37,7 @@ export default function ToolsList() {
               data-aos-delay={idx * 100}
             >
               <div className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">
-                <img src={val.img} className="rounded-lg bg-cover" />
+                <img alt="" src={val.img} className="rounded-lg bg-cover" />
               </div>
               <div className="w-3/4">
                 <div className="text-white text-sm md:text-base lg:text-lg font-bold">
