@@ -33,7 +33,7 @@ export default function ToolsList() {
           return (
             <div
               className="flex p-3 w-full rounded-xl bg-slate-600 dark:bg-gray-900 shadow-lg gap-3"
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-delay={idx * 100}
             >
               <div className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20">

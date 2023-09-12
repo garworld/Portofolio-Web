@@ -1,5 +1,5 @@
 import ss from "../assets/ss2.png";
-import gr from "../assets/gr-logo.png";
+import gr from "../assets/gr.png";
 import { Switch } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
@@ -41,7 +41,7 @@ export default function Navbar() {
         >
           {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
         </div>
-        <div className="h-full flex items-center text-md text-white dark:text-gray-900 font-extrabold gap-10 animate__animated animate__fadeInDown hidden md:flex">
+        <div className="h-full items-center text-md text-white dark:text-gray-900 font-extrabold gap-10 animate__animated animate__fadeInDown hidden md:flex">
           <button>Project</button>
           <button>Contact</button>
           <div className="flex items-center gap-3">
@@ -56,19 +56,24 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`w-full h-full lg:h-20 bg-gray-800 px-4 sm:px-20 md:px-4 flex flex-col justify-between drop-shadow-lg sticky top-16 z-20 transition-max-height duration-500 ease-in-out overflow-hidden`}
+        className={`w-full h-full lg:h-20 bg-gray-800 dark:bg-slate-300 px-4 sm:px-20 md:px-4 flex flex-col justify-between drop-shadow-lg sticky top-16 z-20 transition-max-height duration-500 ease-in-out overflow-hidden`}
         style={{
           maxHeight: isOpen ? "112px" : "0",
         }}
       >
-        <div className="h-full w-full flex flex-col items-center text-md text-white font-extrabold gap-5 ">
+        <div className="h-full w-full flex flex-col items-center text-md text-white dark:text-gray-900 font-extrabold gap-5 ">
           <button className="pt-3">Project 💻</button>
           <button>Contact ✉️</button>
         </div>
         <div className="w-full flex justify-end pb-3">
-          <div className="flex items-center gap-3">
-            <Switch />
-            <BsSunFill className="text-white" />
+          <div className="flex items-center gap-3 text-white dark:text-gray-900">
+            <Switch
+              value={theme === "dark" ? "light" : "dark"}
+              onChange={(e) => {
+                setTheme(e.target.value);
+              }}
+            />
+            {theme === "dark" ? <BsSunFill /> : <BsMoonFill />}
           </div>
         </div>
       </div>

@@ -61,8 +61,8 @@ export default function Footer() {
           >
             <button
               className="w-12 h-12 bg-slate-500 rounded-full flex justify-center items-center"
-              data-aos="fade-left"
-              data-aos-delay="500"
+              data-aos="fade-right"
+              data-aos-delay="1100"
             >
               <BsInstagram className="text-2xl" />
             </button>
@@ -74,7 +74,7 @@ export default function Footer() {
           >
             <button
               className="w-12 h-12 bg-slate-500 rounded-full flex justify-center items-center"
-              data-aos="fade-left"
+              data-aos="fade-right"
               data-aos-delay="800"
             >
               <BsGithub className="text-2xl" />
@@ -87,8 +87,8 @@ export default function Footer() {
           >
             <button
               className="w-12 h-12 bg-slate-500 rounded-full flex justify-center items-center"
-              data-aos="fade-left"
-              data-aos-delay="1100"
+              data-aos="fade-right"
+              data-aos-delay="500"
             >
               <BsLinkedin className="text-2xl" />
             </button>
