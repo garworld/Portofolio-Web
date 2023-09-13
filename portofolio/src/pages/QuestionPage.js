@@ -33,10 +33,10 @@ export default function QuestionPage() {
 
         emailjs
           .sendForm(
-            "service_fvvtejk",
-            "template_ivu44ve",
+            process.env.REACT_APP_SERVICEID,
+            process.env.REACT_APP_TEMPLATEID,
             form.current,
-            "E7HiL7ccogiQuv5R3"
+            process.env.REACT_APP_PROVIDERID
           )
           .then(
             (result) => {
