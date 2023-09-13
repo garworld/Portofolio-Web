@@ -1,7 +1,6 @@
 import { GrLinkNext } from "react-icons/gr";
 import "../App.css";
-import "animate.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
@@ -63,20 +62,23 @@ export default function QuestionPage() {
     const { id, value } = e.target;
     formik.setFieldValue(id, value);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="w-full h-full bg-gray-900 dark:bg-slate-300 lg:px-32">
         <div className="flex justify-center p-5 sm:px-20 md:p-5 lg:p-5 ">
           <div className=" w-full md:w-3/5 lg:w-3/5 text-white  text-center p-5 rounded-lg border border-blue-400 dark:border-blue-950 dark:bg-gray-900">
-            <div className="font-bold text-xl md:text-2xl lg:text-3xl pb-7 animate__animated animate__fadeInUp">
+            <div className="font-bold text-xl md:text-2xl lg:text-3xl pb-7 animate__animated animate__fadeIn">
               Send me a message
             </div>
-            <div className="font-semibold text-base md:text-lg lg:text-xl text-blue-300 pb-6 animate__animated animate__fadeInUp">
+            <div className="font-semibold text-base md:text-lg lg:text-xl text-blue-300 pb-6 animate__animated animate__fadeIn">
               Write down any questions, feedback, or brilliant ideas you have,
               and let me know about it!
             </div>
             <form ref={form}>
-              <div className="text-sm md:text-base lg:text-lg font-medium text-left flex flex-col gap-7 animate__animated animate__fadeInUp">
+              <div className="text-sm md:text-base lg:text-lg font-medium text-left flex flex-col gap-7 animate__animated animate__fadeIn">
                 <box
                   className={`inputbox ${
                     formik.values.name ? "input-has-value" : ""
@@ -163,10 +165,6 @@ export default function QuestionPage() {
                     {formik.errors.subject}
                   </box>
                 </box>
-                {/* <box className={`inputbox ${value ? "input-has-value" : ""}`}>
-                <textarea className="bg-transparent border border-blue-300 p-1 w-full px-3 rounded-md" />
-                <label>Message</label>
-              </box> */}
                 <div>
                   <label
                     className={`pl-1 text-base ${

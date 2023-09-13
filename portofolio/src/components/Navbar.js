@@ -6,13 +6,11 @@ import { AiOutlineClose } from "react-icons/ai";
 import "animate.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-scroll";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const nav = useNavigate();
   const [theme, setTheme] = useState(false);
-  console.log(theme);
   const element = document.documentElement;
   useEffect(() => {
     switch (theme) {
@@ -26,6 +24,18 @@ export default function Navbar() {
         break;
     }
   }, [theme]);
+  const scrollToElement = (elementId, offset) => {
+    nav("/");
+    setTimeout(() => {
+      const targetElement = document.getElementById(elementId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop + offset, // Sesuaikan offset jika diperlukan
+          behavior: "smooth",
+        });
+      }
+    }, 100);
+  };
   return (
     <>
       <div className="w-full h-16 lg:h-20 bg-gray-900 dark:bg-slate-300 px-4 sm:px-20 md:px-4 py-3 flex justify-between drop-shadow-lg sticky top-0 z-30">
@@ -44,28 +54,22 @@ export default function Navbar() {
           {isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
         </div>
         <div className="h-full items-center text-md text-white dark:text-gray-900 font-extrabold gap-10 animate__animated animate__fadeInDown hidden md:flex">
-          <button>
-            <Link
-              to="project"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Project
-            </Link>
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              scrollToElement("project", -200);
+            }}
+          >
+            Project
           </button>
 
-          <button>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Contact
-            </Link>
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              scrollToElement("contact", -150);
+            }}
+          >
+            Contact
           </button>
           <div className="flex items-center gap-3">
             <Switch
@@ -85,27 +89,22 @@ export default function Navbar() {
         }}
       >
         <div className="h-full w-full flex flex-col items-center text-md text-white dark:text-gray-900 font-extrabold gap-5 ">
-          <button className="pt-3">
-            <Link
-              to="project"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Project 💻
-            </Link>
+          <button
+            className="pt-3"
+            onClick={() => {
+              setIsOpen(false);
+              scrollToElement("project", -200);
+            }}
+          >
+            Project 💻
           </button>
-          <button>
-            <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-            >
-              Contact ✉️
-            </Link>
+          <button
+            onClick={() => {
+              setIsOpen(false);
+              scrollToElement("contact", -150);
+            }}
+          >
+            Contact ✉️
           </button>
         </div>
         <div className="w-full flex justify-end pb-3">
