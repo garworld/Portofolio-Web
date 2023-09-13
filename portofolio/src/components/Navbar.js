@@ -16,9 +16,11 @@ export default function Navbar() {
     switch (theme) {
       case "dark":
         element.classList.add("dark");
+        localStorage.setItem("theme", "light");
         break;
       case "light":
         element.classList.remove("dark");
+        localStorage.setItem("theme", "dark");
         break;
       default:
         break;
@@ -83,7 +85,7 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`w-full h-full lg:h-20 bg-gray-800 dark:bg-slate-300 px-4 sm:px-20 md:px-4 flex flex-col justify-between drop-shadow-lg sticky top-16 z-20 transition-max-height duration-500 ease-in-out overflow-hidden`}
+        className={`w-full h-full lg:h-20 bg-gray-800 dark:bg-slate-300 px-4 sm:px-20 md:px-4 flex flex-col justify-between drop-shadow-lg sticky top-16 z-20 transition-max-height duration-500 ease-in-out overflow-hidden md:hidden lg:hidden`}
         style={{
           maxHeight: isOpen ? "112px" : "0",
         }}

@@ -8,8 +8,8 @@ export default function ModalUI(props) {
   const { onClose, selectedItem } = props;
   return (
     <>
-      <div className="flex justify-between pb-5">
-        <div className="text-xl font-bold text-blue-900">
+      <div className="flex justify-between pb-5 ">
+        <div className="text-xl font-bold text-white dark:text-gray-900 ">
           {selectedItem.title} User Interface
         </div>
         <div
@@ -17,7 +17,7 @@ export default function ModalUI(props) {
             onClose();
           }}
         >
-          <AiOutlineClose className="text-2xl hover:cursor-pointer" />
+          <AiOutlineClose className="text-2xl hover:cursor-pointer text-white dark:text-blue-800" />
         </div>
       </div>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
@@ -34,6 +34,19 @@ export default function ModalUI(props) {
             );
           })}
       </Swiper>
+      <div className="w-full text-white dark:text-blue-800 font-semibold pt-3">
+        Dependencies
+      </div>
+      <div className="text-white dark:text-blue-800 text-sm">
+        <div>Front-End : {selectedItem?.dependencies_fe}</div>
+        <div
+          className={
+            selectedItem?.dependencies_be != undefined ? "block" : "hidden"
+          }
+        >
+          Back-End : {selectedItem?.dependencies_be}
+        </div>
+      </div>
     </>
   );
 }

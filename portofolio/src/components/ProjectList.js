@@ -22,7 +22,7 @@ import { useState } from "react";
 export default function ProjectList() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [selectedItem, setSelectedItem] = useState({});
-  console.log(selectedItem);
+  const theme = localStorage.getItem("theme");
   const projects = [
     {
       img: ssWeb,
@@ -31,6 +31,10 @@ export default function ProjectList() {
       button: "View Website",
       desc: "Creating an online grocery web inspired by Segari and Sayur Box web. Responsive website that can be used to shop for kitchen needs from home.",
       link: "https://jcwd020603.purwadhikabootcamp.com/",
+      dependencies_fe:
+        "Chakra UI, Redux, Axios, Chart.js, Formik, Moment, Yup, Xlsx",
+      dependencies_be:
+        "Bcrypt, Express, Sequelize, Nanoid, Multer, MySql, Nodemailer, Dotenv",
     },
     {
       img: sanyobaWeb,
@@ -39,6 +43,9 @@ export default function ProjectList() {
       button: "View More UI",
       desc: "Creating an application with a Point of Sales system. can be used as a cashier system in a cafe to help make orders and payments. as well as visualizing sales reports for the admin.",
       link: [sanyoba1, sanyoba2, sanyoba3, sanyoba4, sanyoba5, sanyoba6],
+      dependencies_fe: "Chakra UI, Redux, Axios, Chart.js, Formik, Yup, Moment",
+      dependencies_be:
+        "Bcrypt, Express, Sequelize, Nanoid, Multer, MySql, Nodemailer, Dotenv",
     },
     {
       img: spotify1,
@@ -47,6 +54,7 @@ export default function ProjectList() {
       button: "View More UI",
       desc: "Cloning a login page, register page, and home page of the spotify website. where we can register, login, and listen to some songs.",
       link: [spotify1, spotify2, spotify3],
+      dependencies_fe: "Chakra UI, Redux, Formik, Axios, JSON, Yup",
     },
   ];
   return (
@@ -108,7 +116,14 @@ export default function ProjectList() {
       </div>
       <Modal isOpen={isOpen} onClose={onClose} isCentered>
         <ModalOverlay />
-        <ModalContent maxW={{ base: "600px", lg: "600px" }} padding={"20px"}>
+        <ModalContent
+          maxW={{ base: "600px", lg: "600px" }}
+          padding={"20px"}
+          bg={theme === "dark" ? "#111827" : "#cbd5e1"}
+          // className={`bg-${theme === "dark" ? "#cbd5e1" : "#111827"}`}
+          shadow={"lg"}
+          border={theme === "dark" ? "3px solid white" : "3px solid darkblue"}
+        >
           <ModalUI onClose={onClose} selectedItem={selectedItem} />
         </ModalContent>
       </Modal>
