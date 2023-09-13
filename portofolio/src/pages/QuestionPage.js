@@ -83,7 +83,7 @@ export default function QuestionPage() {
                   }`}
                 >
                   <input
-                    className={`bg-transparent border p-1 w-full px-3 rounded-md outline-none ${
+                    className={`bg-transparent border p-1 w-full h-10 px-3 rounded-md outline-none ${
                       formik.errors.name ? "border-red-500" : "border-blue-300"
                     } `}
                     name="name"
@@ -111,7 +111,7 @@ export default function QuestionPage() {
                   }`}
                 >
                   <input
-                    className={`bg-transparent border p-1 w-full px-3 rounded-md outline-none ${
+                    className={`bg-transparent border p-1 w-full h-10 px-3 rounded-md outline-none ${
                       formik.errors.email ? "border-red-500" : "border-blue-300"
                     } `}
                     name="email"
@@ -139,7 +139,7 @@ export default function QuestionPage() {
                   }`}
                 >
                   <input
-                    className={`bg-transparent border p-1 w-full px-3 rounded-md outline-none ${
+                    className={`bg-transparent border p-1 w-full h-10 px-3 rounded-md outline-none ${
                       formik.errors.subject
                         ? "border-red-500"
                         : "border-blue-300"
@@ -169,7 +169,7 @@ export default function QuestionPage() {
               </box> */}
                 <div>
                   <label
-                    className={`pl-1 ${
+                    className={`pl-1 text-base ${
                       formik.errors.message ? "text-red-500" : "text-white"
                     }`}
                   >

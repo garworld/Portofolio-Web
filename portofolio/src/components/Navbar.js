@@ -32,7 +32,7 @@ export default function Navbar() {
         <img
           alt=""
           src={gr}
-          className="max-w-14 max-h-14 rounded-md animate__animated animate__fadeInDown"
+          className="h-full rounded-md animate__animated animate__fadeInDown"
           onClick={() => nav("/")}
         ></img>
         <div
