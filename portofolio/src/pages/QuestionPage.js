@@ -1,16 +1,17 @@
 import { GrLinkNext } from "react-icons/gr";
 import "../App.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
-import { useToast } from "@chakra-ui/react";
+import { Spinner, useToast } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
 export default function QuestionPage() {
   const form = useRef();
   const toast = useToast();
   const nav = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -29,7 +30,7 @@ export default function QuestionPage() {
     onSubmit: (e) => {
       try {
         // e.preventDefault();
-
+        setIsLoading(true);
         emailjs
           .sendForm(
             process.env.REACT_APP_SERVICEID,
@@ -40,6 +41,7 @@ export default function QuestionPage() {
           .then(
             (result) => {
               console.log(result.text);
+              setIsLoading(false);
               toast({
                 title: "Thank You!",
                 description: "Your Message Successfully Sent.",
@@ -197,9 +199,16 @@ export default function QuestionPage() {
                     className="text-xs md:text-sm lg:text-base bg-blue-300 text-blue-900 p-3 flex items-center gap-2 rounded-full transition-all hover:bg-white"
                     type="submit"
                     onClick={formik.handleSubmit}
+                    disabled={isLoading}
                   >
-                    Submit
-                    <GrLinkNext />
+                    {isLoading ? (
+                      <Spinner />
+                    ) : (
+                      <>
+                        Submit
+                        <GrLinkNext />
+                      </>
+                    )}
                   </button>
                 </div>
               </div>
