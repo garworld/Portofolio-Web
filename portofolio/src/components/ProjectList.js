@@ -16,6 +16,10 @@ import sanyoba6 from "../assets/sanyoba6.png";
 import spotify1 from "../assets/spotify1.png";
 import spotify2 from "../assets/spotify2.png";
 import spotify3 from "../assets/spotify3.png";
+import jamesbot1 from "../assets/jamesbot-dashboard2.png";
+import jamesbot2 from "../assets/jamesbot-dashboard.png";
+import jamesbot3 from "../assets/jamesbot-buy.png";
+import jamesbot4 from "../assets/jamesbot-presale.png";
 
 import { useState } from "react";
 
@@ -55,6 +59,16 @@ export default function ProjectList() {
       desc: "Cloning a login page, register page, and home page of the spotify website. where we can register, login, and listen to some songs.",
       link: [spotify1, spotify2, spotify3],
       dependencies_fe: "Chakra UI, Redux, Formik, Axios, JSON, Yup",
+    },
+    {
+      img: jamesbot1,
+      title: "James Bot",
+      type: "Decentralize Finance App",
+      button: "View More UI",
+      desc: "Create a DeFi App inside a telegram bot that can be used to swap various crypto tokens across multiple chains and create token presale events.",
+      link: [jamesbot2, jamesbot3, jamesbot4],
+      dependencies_fe: "React + Vite, Redux",
+      dependencies_be: "PostgreSql, Fastify, Ethers, Web3.js",
     },
   ];
   return (
