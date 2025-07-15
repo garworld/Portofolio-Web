@@ -1,13 +1,13 @@
-import JS from "../assets/JavaScript-logo.png";
+import TS from "../assets/ts-logo.png";
 import reactLogo from "../assets/react-logo.png";
 import nodejs from "../assets/node-js.jpg";
 
 export default function ToolsList() {
   const tools = [
     {
-      tool: "Javascript",
+      tool: "Typescript",
       desc: " programming language that is often used to develop interactive and dynamic web.",
-      img: JS,
+      img: TS,
     },
     {
       tool: "React",

@@ -20,6 +20,11 @@ import jamesbot1 from "../assets/jamesbot-dashboard2.png";
 import jamesbot2 from "../assets/jamesbot-dashboard.png";
 import jamesbot3 from "../assets/jamesbot-buy.png";
 import jamesbot4 from "../assets/jamesbot-presale.png";
+import snapspot1 from "../assets/snapspot-1.png";
+import snapspot2 from "../assets/snapspot-2.png";
+import snapspot3 from "../assets/snapspot-3.png";
+import snapspot4 from "../assets/snapspot-4.png";
+import snapspot5 from "../assets/snapspot-5.png";
 
 import { useState } from "react";
 
@@ -69,6 +74,16 @@ export default function ProjectList() {
       link: [jamesbot2, jamesbot3, jamesbot4],
       dependencies_fe: "React + Vite, Redux",
       dependencies_be: "PostgreSql, Fastify, Ethers, Web3.js",
+    },
+    {
+      img: snapspot1,
+      title: "Snapspot",
+      type: "Photobooth Web App",
+      button: "View More UI",
+      desc: "A desktop photobooth app with camera capture, photo layout editor, image merging, and QR/email sharing features.",
+      link: [snapspot2, snapspot3, snapspot4, snapspot5],
+      dependencies_fe: "React + Vite, Electron.Js, FFmpeg",
+      dependencies_be: "filebrowser",
     },
   ];
   return (
