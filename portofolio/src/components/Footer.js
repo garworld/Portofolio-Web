@@ -71,7 +71,7 @@ export default function Footer() {
             </button>
           </a>
           <a
-            href="https://github.com/Garasuryanegara"
+            href="https://github.com/garworld"
             target="_blank"
             rel="noopener noreferrer"
           >

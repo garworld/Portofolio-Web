@@ -25,6 +25,9 @@ import snapspot2 from "../assets/snapspot-2.png";
 import snapspot3 from "../assets/snapspot-3.png";
 import snapspot4 from "../assets/snapspot-4.png";
 import snapspot5 from "../assets/snapspot-5.png";
+import nexus1 from "../assets/nexus-1.png";
+import nexus2 from "../assets/nexus-2.png";
+import nexus3 from "../assets/nexus-3.png";
 
 import { useState } from "react";
 
@@ -84,6 +87,15 @@ export default function ProjectList() {
       link: [snapspot2, snapspot3, snapspot4, snapspot5],
       dependencies_fe: "React + Vite, Electron.Js, FFmpeg",
       dependencies_be: "filebrowser",
+    },
+    {
+      img: nexus1,
+      title: "Nexus",
+      type: "Trading Call Bot",
+      button: "View More Call",
+      desc: "An automated trading call bot that integrates market data from Bybit Websocket Streams, can analyze real-time prices and volume activity.",
+      link: [nexus1, nexus2, nexus3],
+      dependencies_be: "Node.js, Discord.js, Redis, Bybit API",
     },
   ];
   return (
